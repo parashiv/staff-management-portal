@@ -9,30 +9,30 @@ from .forms import PostsForm, LeaveForm, selectForm
 # Create your views here.
 
 def homepage(request):
-"""! Defines what action to perform when the view 'homepage' is called from urls. Sends the template index.html as HTTPResponse (for the homepage)
+	"""! Defines what action to perform when the view 'homepage' is called from urls. Sends the template index.html as HTTPResponse (for the homepage)
 	
-    @param request The HTTPRequest object
-    @return HTTPResponse object conatining the template for homepage
-    """
+	@param request The HTTPRequest object
+	@return HTTPResponse object conatining the template for homepage
+	"""
 	return render(request=request,
 				  template_name="main/index.html",	
 					)
 
 def posts(request):
-"""! Defines what action to perform when the view 'posts' is called from urls. Sends the template posts.html as HTTPResponse, along with all the Posts objects as dict to be used as the template’s context for rendering.	
-    @param request The HTTPRequest object
-    @return HTTPResponse object containing the template and context containing the Posts objects
-    """
+	"""! Defines what action to perform when the view 'posts' is called from urls. Sends the template posts.html as HTTPResponse, along with all the Posts objects as dict to be used as the template’s context for rendering.	
+	@param request The HTTPRequest object
+	@return HTTPResponse object containing the template and context containing the Posts objects
+	"""
 	return render(request=request,
 				  template_name="main/posts.html",
 				  context={"posts": Posts.objects.all}	
 					)
 
 def leave_requests(request):
-"""! Defines what action to perform when the view 'leave_requests' is called from urls. Used to view the leave requests made by the staffs of the current supervisor. Sends the template leave_requests.html as HTTPResponse, along with those leave requests made only by the staffs of the current supervisor as the template’s context for rendering.	
-    @param request The HTTPRequest object
-    @return HTTPResponse object containing the template and context containing the leaves objects
-    """
+	"""! Defines what action to perform when the view 'leave_requests' is called from urls. Used to view the leave requests made by the staffs of the current supervisor. Sends the template leave_requests.html as HTTPResponse, along with those leave requests made only by the staffs of the current supervisor as the template’s context for rendering.	
+	@param request The HTTPRequest object
+	@return HTTPResponse object containing the template and context containing the leaves objects
+	"""
 	super_name=request.user.username
 	staffs=dependent.objects.filter(supervisor_name=super_name).values('staff_name')
 	leaves = Leave.objects.filter(author__in=staffs)
@@ -42,10 +42,10 @@ def leave_requests(request):
 					)
 
 def select_supervisor(request):
-"""! Defines what action to perform when the view 'select_supervisor' is called from urls. Saves the data collected from selectForminto the model dependent, along with setting the satff_name of the model dependent to the current user's username. Sends the template select_super.html as HTTPResponse, along with the django form for getting the supervisor of the cuurent user(a dropdown select option), as the template’s context for rendering.	
-    @param request The HTTPRequest object
-    @return HTTPResponse object containing the template and context containing the form selectForm to get the supervisor of current user.
-    """	
+	"""! Defines what action to perform when the view 'select_supervisor' is called from urls. Saves the data collected from selectForminto the model dependent, along with setting the satff_name of the model dependent to the current user's username. Sends the template select_super.html as HTTPResponse, along with the django form for getting the supervisor of the cuurent user(a dropdown select option), as the template’s context for rendering.	
+	@param request The HTTPRequest object
+	@return HTTPResponse object containing the template and context containing the form selectForm to get the supervisor of current user.
+	"""	
 	# A HTTP POST?
 	if request.method == 'POST':
 		form = selectForm(request.POST)
@@ -76,10 +76,10 @@ def select_supervisor(request):
 
 
 def create_posts(request):
-"""! Defines what action to perform when the view 'create_posts' is called from urls. Used to create new posts for job by the supervisors, for the staffs. Sends the template create_post.html as HTTPResponse, along with the django form for getting the post details posted by the current user, as the template’s context for rendering.	
-    @param request The HTTPRequest object
-    @return HTTPResponse object containing the template and context containing the django form PostsForm 
-    """	
+	"""! Defines what action to perform when the view 'create_posts' is called from urls. Used to create new posts for job by the supervisors, for the staffs. Sends the template create_post.html as HTTPResponse, along with the django form for getting the post details posted by the current user, as the template’s context for rendering.	
+	@param request The HTTPRequest object
+	@return HTTPResponse object containing the template and context containing the django form PostsForm 
+	"""	
 	# A HTTP POST?
 	if request.method == 'POST':
 		form = PostsForm(request.POST)
@@ -110,10 +110,10 @@ def create_posts(request):
 
 
 def leave(request):
-"""! Defines what action to perform when the view 'leave' is called from urls. Used to create new leave requests by the staffs. Sends the template apply_leave.html as HTTPResponse, along with the django form for getting the leave request details posted by the current user, as the template’s context for rendering.	
-    @param request The HTTPRequest object
-    @return HTTPResponse object containing the template and context containing the django form LeaveForm 
-    """	
+	"""! Defines what action to perform when the view 'leave' is called from urls. Used to create new leave requests by the staffs. Sends the template apply_leave.html as HTTPResponse, along with the django form for getting the leave request details posted by the current user, as the template’s context for rendering.	
+	@param request The HTTPRequest object
+	@return HTTPResponse object containing the template and context containing the django form LeaveForm 
+	"""	
 	# A HTTP POST?
 	if request.method == 'POST':
 		form = LeaveForm(request.POST)
@@ -141,20 +141,20 @@ def leave(request):
 				  context={'form': form}
 				  )    
 def register(request):
-"""! Defines what action to perform when the view 'register' is called from urls. Used to redirect to a page having choices for registering as Supervisor or Staff.. Sends the template choices.html as HTTPResponse, along with the django form for getting the post details posted by the current user, as the template’s context for rendering.	
-    @param request The HTTPRequest object
-    @return HTTPResponse object containing the template for choices  
-    """
+	"""! Defines what action to perform when the view 'register' is called from urls. Used to redirect to a page having choices for registering as Supervisor or Staff.. Sends the template choices.html as HTTPResponse, along with the django form for getting the post details posted by the current user, as the template’s context for rendering.	
+	@param request The HTTPRequest object
+	@return HTTPResponse object containing the template for choices  
+	"""
 	return render(request=request,
 				  template_name="main/choices.html",	
 					)
 
 
 def register_staff(request):
-"""! Defines what action to perform when the view 'register_staff' is called from urls. Used to create new staff account and save it to the User model. Sends the template register.html as HTTPResponse, along with the django form for getting the leave request details posted by the current user and 'super' as false , as the template’s context for rendering.	
-    @param request The HTTPRequest object
-    @return HTTPResponse object containing the template and context containing the django form UserCreationForm and the value of super as false 
-    """
+	"""! Defines what action to perform when the view 'register_staff' is called from urls. Used to create new staff account and save it to the User model. Sends the template register.html as HTTPResponse, along with the django form for getting the leave request details posted by the current user and 'super' as false , as the template’s context for rendering.	
+	@param request The HTTPRequest object
+	@return HTTPResponse object containing the template and context containing the django form UserCreationForm and the value of super as false 
+	"""
 	if request.method == "POST":
 		form = UserCreationForm(request.POST)
 		if form.is_valid():
@@ -176,10 +176,10 @@ def register_staff(request):
 					)
 
 def register_supervisor(request):
-"""! Defines what action to perform when the view 'register_supervisor' is called from urls. Used to create new supervisor account and save it to the User model. Sends the template register.html as HTTPResponse, along with the django form for getting the leave request details posted by the current user and 'super' as true , as the template’s context for rendering.	
-    @param request The HTTPRequest object
-    @return HTTPResponse object containing the template and context containing the django form UserCreationForm and the value of super as true 
-    """
+	"""! Defines what action to perform when the view 'register_supervisor' is called from urls. Used to create new supervisor account and save it to the User model. Sends the template register.html as HTTPResponse, along with the django form for getting the leave request details posted by the current user and 'super' as true , as the template’s context for rendering.	
+	@param request The HTTPRequest object
+	@return HTTPResponse object containing the template and context containing the django form UserCreationForm and the value of super as true 
+	"""
 	if request.method == "POST":
 		form = UserCreationForm(request.POST)
 		if form.is_valid():
@@ -201,19 +201,19 @@ def register_supervisor(request):
 					)	
 
 def logout_request(request):
-"""! Defines what action to perform when the view 'logout_request' is called from urls. Used to log out the current user.	
-    @param request The HTTPRequest object
-    @return Redirects to the homepage view
-    """
+	"""! Defines what action to perform when the view 'logout_request' is called from urls. Used to log out the current user.	
+	@param request The HTTPRequest object
+	@return Redirects to the homepage view
+	"""
 	logout(request)
 	messages.info(request, "Logged out successfully!")
 	return redirect("main:homepage")
 
 def login_request(request):
-"""! Defines what action to perform when the view 'login_request' is called from urls. Used to log in an user. Displays appropriate error message, if any. Sends the template login.html as HTTPResponse, along with the django form for log in , as the template’s context for rendering.	
-    @param request The HTTPRequest object
-    @return HTTPResponse object containing the template and context containing the django form AuthenticationForm 
-    """
+	"""! Defines what action to perform when the view 'login_request' is called from urls. Used to log in an user. Displays appropriate error message, if any. Sends the template login.html as HTTPResponse, along with the django form for log in , as the template’s context for rendering.	
+	@param request The HTTPRequest object
+	@return HTTPResponse object containing the template and context containing the django form AuthenticationForm 
+	"""
 	if request.method == 'POST':
 		form = AuthenticationForm(request=request, data=request.POST)
 		if form.is_valid():
