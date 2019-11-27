@@ -1,0 +1,230 @@
+\hypertarget{namespacemain_1_1views}{}\section{main.\+views Namespace Reference}
+\label{namespacemain_1_1views}\index{main.\+views@{main.\+views}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacemain_1_1views_a65a9dba6e3878ee1da013593b60345d4}{homepage} (request)
+\begin{DoxyCompactList}\small\item\em Defines what action to perform when the view \textquotesingle{}homepage\textquotesingle{} is called from urls. \end{DoxyCompactList}\item 
+def \hyperlink{namespacemain_1_1views_a33ddb0f904d196b5830dbb9a1a8f1282}{posts} (request)
+\begin{DoxyCompactList}\small\item\em Defines what action to perform when the view \textquotesingle{}posts\textquotesingle{} is called from urls. \end{DoxyCompactList}\item 
+def \hyperlink{namespacemain_1_1views_acdd49ab16815f9d6cb3e88feab0bfa80}{leave\+\_\+requests} (request)
+\begin{DoxyCompactList}\small\item\em Defines what action to perform when the view \textquotesingle{}leave\+\_\+requests\textquotesingle{} is called from urls. \end{DoxyCompactList}\item 
+def \hyperlink{namespacemain_1_1views_abdf62da100e2d6945871318f111c478c}{select\+\_\+supervisor} (request)
+\begin{DoxyCompactList}\small\item\em Defines what action to perform when the view \textquotesingle{}select\+\_\+supervisor\textquotesingle{} is called from urls. \end{DoxyCompactList}\item 
+def \hyperlink{namespacemain_1_1views_a5188f01b8c7ed850b1f946afb34d183a}{create\+\_\+posts} (request)
+\begin{DoxyCompactList}\small\item\em Defines what action to perform when the view \textquotesingle{}create\+\_\+posts\textquotesingle{} is called from urls. \end{DoxyCompactList}\item 
+def \hyperlink{namespacemain_1_1views_a0e05992f5c64ffb3cd35ddc581399e31}{leave} (request)
+\begin{DoxyCompactList}\small\item\em Defines what action to perform when the view \textquotesingle{}leave\textquotesingle{} is called from urls. \end{DoxyCompactList}\item 
+def \hyperlink{namespacemain_1_1views_a36b45d6ab9335da129aeab31c613726a}{register} (request)
+\begin{DoxyCompactList}\small\item\em Defines what action to perform when the view \textquotesingle{}register\textquotesingle{} is called from urls. \end{DoxyCompactList}\item 
+def \hyperlink{namespacemain_1_1views_afa83b35a6a0c354a6d9878bc3584aae4}{register\+\_\+staff} (request)
+\begin{DoxyCompactList}\small\item\em Defines what action to perform when the view \textquotesingle{}register\+\_\+staff\textquotesingle{} is called from urls. \end{DoxyCompactList}\item 
+def \hyperlink{namespacemain_1_1views_a26d1574cf1c0681b1589baf8f2840e4a}{register\+\_\+supervisor} (request)
+\begin{DoxyCompactList}\small\item\em Defines what action to perform when the view \textquotesingle{}register\+\_\+supervisor\textquotesingle{} is called from urls. \end{DoxyCompactList}\item 
+def \hyperlink{namespacemain_1_1views_a19ef1e1ff8dc4a8b7f24c011a69c56f5}{logout\+\_\+request} (request)
+\begin{DoxyCompactList}\small\item\em Defines what action to perform when the view \textquotesingle{}logout\+\_\+request\textquotesingle{} is called from urls. \end{DoxyCompactList}\item 
+def \hyperlink{namespacemain_1_1views_aa4b0b085bb5782a107fce5e03228e97b}{login\+\_\+request} (request)
+\begin{DoxyCompactList}\small\item\em Defines what action to perform when the view \textquotesingle{}login\+\_\+request\textquotesingle{} is called from urls. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacemain_1_1views_a5188f01b8c7ed850b1f946afb34d183a}\label{namespacemain_1_1views_a5188f01b8c7ed850b1f946afb34d183a}} 
+\index{main\+::views@{main\+::views}!create\+\_\+posts@{create\+\_\+posts}}
+\index{create\+\_\+posts@{create\+\_\+posts}!main\+::views@{main\+::views}}
+\subsubsection{\texorpdfstring{create\+\_\+posts()}{create\_posts()}}
+{\footnotesize\ttfamily def main.\+views.\+create\+\_\+posts (\begin{DoxyParamCaption}\item[{}]{request }\end{DoxyParamCaption})}
+
+
+
+Defines what action to perform when the view \textquotesingle{}create\+\_\+posts\textquotesingle{} is called from urls. 
+
+Used to create new posts for job by the supervisors, for the staffs. Sends the template create\+\_\+post.\+html as H\+T\+T\+P\+Response, along with the django form for getting the post details posted by the current user, as the template’s context for rendering. 
+\begin{DoxyParams}{Parameters}
+{\em request} & The H\+T\+T\+P\+Request object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+H\+T\+T\+P\+Response object containing the template and context containing the django form Posts\+Form 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemain_1_1views_a65a9dba6e3878ee1da013593b60345d4}\label{namespacemain_1_1views_a65a9dba6e3878ee1da013593b60345d4}} 
+\index{main\+::views@{main\+::views}!homepage@{homepage}}
+\index{homepage@{homepage}!main\+::views@{main\+::views}}
+\subsubsection{\texorpdfstring{homepage()}{homepage()}}
+{\footnotesize\ttfamily def main.\+views.\+homepage (\begin{DoxyParamCaption}\item[{}]{request }\end{DoxyParamCaption})}
+
+
+
+Defines what action to perform when the view \textquotesingle{}homepage\textquotesingle{} is called from urls. 
+
+Sends the template index.\+html as H\+T\+T\+P\+Response (for the homepage)
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The H\+T\+T\+P\+Request object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+H\+T\+T\+P\+Response object conatining the template for homepage 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemain_1_1views_a0e05992f5c64ffb3cd35ddc581399e31}\label{namespacemain_1_1views_a0e05992f5c64ffb3cd35ddc581399e31}} 
+\index{main\+::views@{main\+::views}!leave@{leave}}
+\index{leave@{leave}!main\+::views@{main\+::views}}
+\subsubsection{\texorpdfstring{leave()}{leave()}}
+{\footnotesize\ttfamily def main.\+views.\+leave (\begin{DoxyParamCaption}\item[{}]{request }\end{DoxyParamCaption})}
+
+
+
+Defines what action to perform when the view \textquotesingle{}leave\textquotesingle{} is called from urls. 
+
+Used to create new leave requests by the staffs. Sends the template apply\+\_\+leave.\+html as H\+T\+T\+P\+Response, along with the django form for getting the leave request details posted by the current user, as the template’s context for rendering. 
+\begin{DoxyParams}{Parameters}
+{\em request} & The H\+T\+T\+P\+Request object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+H\+T\+T\+P\+Response object containing the template and context containing the django form Leave\+Form 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemain_1_1views_acdd49ab16815f9d6cb3e88feab0bfa80}\label{namespacemain_1_1views_acdd49ab16815f9d6cb3e88feab0bfa80}} 
+\index{main\+::views@{main\+::views}!leave\+\_\+requests@{leave\+\_\+requests}}
+\index{leave\+\_\+requests@{leave\+\_\+requests}!main\+::views@{main\+::views}}
+\subsubsection{\texorpdfstring{leave\+\_\+requests()}{leave\_requests()}}
+{\footnotesize\ttfamily def main.\+views.\+leave\+\_\+requests (\begin{DoxyParamCaption}\item[{}]{request }\end{DoxyParamCaption})}
+
+
+
+Defines what action to perform when the view \textquotesingle{}leave\+\_\+requests\textquotesingle{} is called from urls. 
+
+Used to view the leave requests made by the staffs of the current supervisor. Sends the template leave\+\_\+requests.\+html as H\+T\+T\+P\+Response, along with those leave requests made only by the staffs of the current supervisor as the template’s context for rendering. 
+\begin{DoxyParams}{Parameters}
+{\em request} & The H\+T\+T\+P\+Request object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+H\+T\+T\+P\+Response object containing the template and context containing the leaves objects 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemain_1_1views_aa4b0b085bb5782a107fce5e03228e97b}\label{namespacemain_1_1views_aa4b0b085bb5782a107fce5e03228e97b}} 
+\index{main\+::views@{main\+::views}!login\+\_\+request@{login\+\_\+request}}
+\index{login\+\_\+request@{login\+\_\+request}!main\+::views@{main\+::views}}
+\subsubsection{\texorpdfstring{login\+\_\+request()}{login\_request()}}
+{\footnotesize\ttfamily def main.\+views.\+login\+\_\+request (\begin{DoxyParamCaption}\item[{}]{request }\end{DoxyParamCaption})}
+
+
+
+Defines what action to perform when the view \textquotesingle{}login\+\_\+request\textquotesingle{} is called from urls. 
+
+Used to log in an user. Displays appropriate error message, if any. Sends the template login.\+html as H\+T\+T\+P\+Response, along with the django form for log in , as the template’s context for rendering. 
+\begin{DoxyParams}{Parameters}
+{\em request} & The H\+T\+T\+P\+Request object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+H\+T\+T\+P\+Response object containing the template and context containing the django form Authentication\+Form 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemain_1_1views_a19ef1e1ff8dc4a8b7f24c011a69c56f5}\label{namespacemain_1_1views_a19ef1e1ff8dc4a8b7f24c011a69c56f5}} 
+\index{main\+::views@{main\+::views}!logout\+\_\+request@{logout\+\_\+request}}
+\index{logout\+\_\+request@{logout\+\_\+request}!main\+::views@{main\+::views}}
+\subsubsection{\texorpdfstring{logout\+\_\+request()}{logout\_request()}}
+{\footnotesize\ttfamily def main.\+views.\+logout\+\_\+request (\begin{DoxyParamCaption}\item[{}]{request }\end{DoxyParamCaption})}
+
+
+
+Defines what action to perform when the view \textquotesingle{}logout\+\_\+request\textquotesingle{} is called from urls. 
+
+Used to log out the current user. 
+\begin{DoxyParams}{Parameters}
+{\em request} & The H\+T\+T\+P\+Request object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Redirects to the homepage view 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemain_1_1views_a33ddb0f904d196b5830dbb9a1a8f1282}\label{namespacemain_1_1views_a33ddb0f904d196b5830dbb9a1a8f1282}} 
+\index{main\+::views@{main\+::views}!posts@{posts}}
+\index{posts@{posts}!main\+::views@{main\+::views}}
+\subsubsection{\texorpdfstring{posts()}{posts()}}
+{\footnotesize\ttfamily def main.\+views.\+posts (\begin{DoxyParamCaption}\item[{}]{request }\end{DoxyParamCaption})}
+
+
+
+Defines what action to perform when the view \textquotesingle{}posts\textquotesingle{} is called from urls. 
+
+Sends the template posts.\+html as H\+T\+T\+P\+Response, along with all the Posts objects as dict to be used as the template’s context for rendering. 
+\begin{DoxyParams}{Parameters}
+{\em request} & The H\+T\+T\+P\+Request object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+H\+T\+T\+P\+Response object containing the template and context containing the Posts objects 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemain_1_1views_a36b45d6ab9335da129aeab31c613726a}\label{namespacemain_1_1views_a36b45d6ab9335da129aeab31c613726a}} 
+\index{main\+::views@{main\+::views}!register@{register}}
+\index{register@{register}!main\+::views@{main\+::views}}
+\subsubsection{\texorpdfstring{register()}{register()}}
+{\footnotesize\ttfamily def main.\+views.\+register (\begin{DoxyParamCaption}\item[{}]{request }\end{DoxyParamCaption})}
+
+
+
+Defines what action to perform when the view \textquotesingle{}register\textquotesingle{} is called from urls. 
+
+Used to redirect to a page having choices for registering as Supervisor or Staff.. Sends the template choices.\+html as H\+T\+T\+P\+Response, along with the django form for getting the post details posted by the current user, as the template’s context for rendering. 
+\begin{DoxyParams}{Parameters}
+{\em request} & The H\+T\+T\+P\+Request object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+H\+T\+T\+P\+Response object containing the template for choices 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemain_1_1views_afa83b35a6a0c354a6d9878bc3584aae4}\label{namespacemain_1_1views_afa83b35a6a0c354a6d9878bc3584aae4}} 
+\index{main\+::views@{main\+::views}!register\+\_\+staff@{register\+\_\+staff}}
+\index{register\+\_\+staff@{register\+\_\+staff}!main\+::views@{main\+::views}}
+\subsubsection{\texorpdfstring{register\+\_\+staff()}{register\_staff()}}
+{\footnotesize\ttfamily def main.\+views.\+register\+\_\+staff (\begin{DoxyParamCaption}\item[{}]{request }\end{DoxyParamCaption})}
+
+
+
+Defines what action to perform when the view \textquotesingle{}register\+\_\+staff\textquotesingle{} is called from urls. 
+
+Used to create new staff account and save it to the User model. Sends the template register.\+html as H\+T\+T\+P\+Response, along with the django form for getting the leave request details posted by the current user and \textquotesingle{}super\textquotesingle{} as false , as the template’s context for rendering. 
+\begin{DoxyParams}{Parameters}
+{\em request} & The H\+T\+T\+P\+Request object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+H\+T\+T\+P\+Response object containing the template and context containing the django form User\+Creation\+Form and the value of super as false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemain_1_1views_a26d1574cf1c0681b1589baf8f2840e4a}\label{namespacemain_1_1views_a26d1574cf1c0681b1589baf8f2840e4a}} 
+\index{main\+::views@{main\+::views}!register\+\_\+supervisor@{register\+\_\+supervisor}}
+\index{register\+\_\+supervisor@{register\+\_\+supervisor}!main\+::views@{main\+::views}}
+\subsubsection{\texorpdfstring{register\+\_\+supervisor()}{register\_supervisor()}}
+{\footnotesize\ttfamily def main.\+views.\+register\+\_\+supervisor (\begin{DoxyParamCaption}\item[{}]{request }\end{DoxyParamCaption})}
+
+
+
+Defines what action to perform when the view \textquotesingle{}register\+\_\+supervisor\textquotesingle{} is called from urls. 
+
+Used to create new supervisor account and save it to the User model. Sends the template register.\+html as H\+T\+T\+P\+Response, along with the django form for getting the leave request details posted by the current user and \textquotesingle{}super\textquotesingle{} as true , as the template’s context for rendering. 
+\begin{DoxyParams}{Parameters}
+{\em request} & The H\+T\+T\+P\+Request object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+H\+T\+T\+P\+Response object containing the template and context containing the django form User\+Creation\+Form and the value of super as true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemain_1_1views_abdf62da100e2d6945871318f111c478c}\label{namespacemain_1_1views_abdf62da100e2d6945871318f111c478c}} 
+\index{main\+::views@{main\+::views}!select\+\_\+supervisor@{select\+\_\+supervisor}}
+\index{select\+\_\+supervisor@{select\+\_\+supervisor}!main\+::views@{main\+::views}}
+\subsubsection{\texorpdfstring{select\+\_\+supervisor()}{select\_supervisor()}}
+{\footnotesize\ttfamily def main.\+views.\+select\+\_\+supervisor (\begin{DoxyParamCaption}\item[{}]{request }\end{DoxyParamCaption})}
+
+
+
+Defines what action to perform when the view \textquotesingle{}select\+\_\+supervisor\textquotesingle{} is called from urls. 
+
+Saves the data collected from select\+Forminto the model dependent, along with setting the satff\+\_\+name of the model dependent to the current user\textquotesingle{}s username. Sends the template select\+\_\+super.\+html as H\+T\+T\+P\+Response, along with the django form for getting the supervisor of the cuurent user(a dropdown select option), as the template’s context for rendering. 
+\begin{DoxyParams}{Parameters}
+{\em request} & The H\+T\+T\+P\+Request object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+H\+T\+T\+P\+Response object containing the template and context containing the form select\+Form to get the supervisor of current user. 
+\end{DoxyReturn}

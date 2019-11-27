@@ -1,0 +1,160 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+	<script src="{% static 'js/jquery-3.1.1.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<meta name="viewport" content="width=device-width">
+</head>
+<body>
+	<nav class="navbar navbar-dark navbar-expand-lg bg-dark navbar-fixed-top ">
+	  <div class="container">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+			  <a class="navbar-brand" href="/">Staff-ed</a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarNav">
+			    <ul class="navbar-nav ml-auto">
+			      <li class="nav-item">
+			        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+			      </li>
+			      {% if user.is_authenticated %}
+			      	{% if user.is_superuser %}
+			      	  <li class="nav-item">
+				        <a class="nav-link" href="/add_post">Add post</a>
+				      </li>
+				    {% else %}  
+				      <li class="nav-item">
+				        <a class="nav-link" href="/posts">View post</a>
+				      </li>
+				    {% endif %}
+				    
+			      	{% if user.is_superuser %}  
+				      
+				      <li class="nav-item">
+				        <a class="nav-link" href="/leave_requests">View Leave Requests</a>
+				      </li>
+				    {% else %}  
+				      <li class="nav-item">
+				        <a class="nav-link" href="/apply_leave">Apply for leave</a>
+				      </li>
+				    {% endif %}
+				      <li class="nav-item">
+				        <a class="nav-link" href="/logout">Logout</a>
+				      </li>
+				      {% if user.is_superuser %}  
+				      <li class="nav-item">
+				        <a class="nav-link" href="/jet_api/register">Dashboard</a>
+				      </li>
+				     {% endif %}
+			   	  {% else %}
+			   	  		<li class="nav-item">
+				        <a class="nav-link" href="/login">Login</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="/register">Register</a>
+				      </li>
+				  {% endif %}    
+			    </ul>
+			  </div>
+	  </div><!-- /.container -->
+	</nav>  
+	<div class="container">
+		
+		{% if messages %}
+			{% for message in messages %}
+				{% if message.tags == 'success' %}
+					<div class="alert alert-success alert-dismissible fade show" role="alert">
+				{% elif messages.tags == 'info' %}
+					<div class="alert alert-info alert-dismissible fade show" role="alert">
+				{% elif messages.tags == 'warning' %}
+					<div class="alert alert-warning alert-dismissible fade show" role="alert">
+				{% elif messages.tags == 'error' %}
+					<div class="alert alert-danger alert-dismissible fade show" role="alert">		
+				{% endif %}	
+						{{message}}
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+			{% endfor %}
+		{% endif %}	
+	</div>
+	
+
+	<div class="container" id="c1">
+		<div class="jumbotron text-center">
+
+		  <h1>Recent Posts</h1>
+		</div>
+		<div class="accordion" id="accordionExample">
+
+			{% for p in posts %}
+			<div class="row text-center">
+				<div class="col-md-6 offset-md-3 col-sm-6">
+					<div class="card text-center">
+	      				<h3 class="card-title">{{p.job_title}}</h3>
+	      				<div class="card-header" id="heading{{p.id}}">
+			       			 <p>Posted on : {{p.post_published}}</p>
+			       			   <h5 class="mb-0">
+				        			<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse-{{p.id}}" aria-expanded="true" aria-controls="collapse-{{p.id}}">
+				        		  	View
+				        			</button>
+				      			</h5>
+			       			 <div id="collapse-{{p.id}}" class="collapse" aria-labelledby="heading{{p.id}}" data-parent="#accordionExample">
+				      			<div class="card-body">
+				      				<p>Location : {{p.job_location}}</p>
+				      				<p>Date : {{p.job_date}}</p>
+							        <p>{{p.job_details}}</p>
+							        <p><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">Apply!</button></p>
+							       	<!-- Button trigger modal -->
+								
+									<!-- Modal -->
+									<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+									  <div class="modal-dialog modal-dialog-centered" role="document">
+									    <div class="modal-content">
+									      <div class="modal-header">
+									        <h5 class="modal-title" id="exampleModalLongTitle">Confirm your action</h5>
+									        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									          <span aria-hidden="true">&times;</span>
+									        </button>
+									      </div>
+									      <div class="modal-body">
+									        You are applying for {{p.job_title}}, dated {{p.job_date}}
+									      </div>
+									      <div class="modal-footer">
+									        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									        <button type="button" class="btn btn-primary" data-dismiss="modal">Yes, proceed and apply</button>
+									      </div>
+									    </div>
+									  </div>
+									</div>
+								    </div>
+			    				 </div>
+		 
+		      			</div>
+		      			<div class="card-footer text-muted">
+		  				</div>
+					</div>
+				</div>
+			</div>	
+			<br>
+			{% endfor %}
+			</div>
+	</div>
+
+	<div class="footer" style="position: relative;">
+		<div class="container">
+			<p>Copyright @ Staff-ed. All Rights Reserved | Contact Us: +91 90000 00000</p>
+		</div>
+	</div>
+
+	</body>
+	</html>

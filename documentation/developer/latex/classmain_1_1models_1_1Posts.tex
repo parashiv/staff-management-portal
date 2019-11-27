@@ -1,0 +1,113 @@
+\hypertarget{classmain_1_1models_1_1Posts}{}\section{main.\+models.\+Posts Class Reference}
+\label{classmain_1_1models_1_1Posts}\index{main.\+models.\+Posts@{main.\+models.\+Posts}}
+
+
+Defines the model to store all the post-\/related details.  
+
+
+Inheritance diagram for main.\+models.\+Posts\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmain_1_1models_1_1Posts}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classmain_1_1models_1_1Posts_a1beebe8f01eb6f1cf42f33a877c1b73a}{\+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmain_1_1models_1_1Posts_aff937f03c1b067fa1dbc22fe0a4f141c}{job\+\_\+title} = models.\+Char\+Field(max\+\_\+length=200)
+\begin{DoxyCompactList}\small\item\em The title of the post. \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1models_1_1Posts_a6a7cef4a2cff2cb38557a346b1b9cc9e}{job\+\_\+location} = models.\+Char\+Field(max\+\_\+length=100,default=\char`\"{}Hostel\+X\+YZ\char`\"{})
+\begin{DoxyCompactList}\small\item\em Location of the job. \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1models_1_1Posts_a8d5fd2451a74cbef923c841192627ee4}{job\+\_\+date} = models.\+Date\+Time\+Field(\char`\"{}job date\char`\"{},default=datetime.\+now())
+\begin{DoxyCompactList}\small\item\em date of job \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1models_1_1Posts_a01fb86493104e3ed82c25b011b4768a7}{job\+\_\+details} = models.\+Text\+Field()
+\begin{DoxyCompactList}\small\item\em A brief description of the job. \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1models_1_1Posts_a6e0e50f0ed5e44dc5b275de570745348}{post\+\_\+published} = models.\+Date\+Time\+Field(\char`\"{}date published\char`\"{},default=datetime.\+now())
+\begin{DoxyCompactList}\small\item\em Date when the post was published. \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1models_1_1Posts_ab030c90138407de66474824c18a2ef28}{author} = models.\+Char\+Field(max\+\_\+length=200,default=\char`\"{}Author\char`\"{})
+\begin{DoxyCompactList}\small\item\em username of the person who created the post \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines the model to store all the post-\/related details. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classmain_1_1models_1_1Posts_a1beebe8f01eb6f1cf42f33a877c1b73a}\label{classmain_1_1models_1_1Posts_a1beebe8f01eb6f1cf42f33a877c1b73a}} 
+\index{main\+::models\+::\+Posts@{main\+::models\+::\+Posts}!\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}!main\+::models\+::\+Posts@{main\+::models\+::\+Posts}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+str\+\_\+\+\_\+()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def main.\+models.\+Posts.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classmain_1_1models_1_1Posts_ab030c90138407de66474824c18a2ef28}\label{classmain_1_1models_1_1Posts_ab030c90138407de66474824c18a2ef28}} 
+\index{main\+::models\+::\+Posts@{main\+::models\+::\+Posts}!author@{author}}
+\index{author@{author}!main\+::models\+::\+Posts@{main\+::models\+::\+Posts}}
+\subsubsection{\texorpdfstring{author}{author}}
+{\footnotesize\ttfamily main.\+models.\+Posts.\+author = models.\+Char\+Field(max\+\_\+length=200,default=\char`\"{}Author\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+username of the person who created the post 
+
+\mbox{\Hypertarget{classmain_1_1models_1_1Posts_a8d5fd2451a74cbef923c841192627ee4}\label{classmain_1_1models_1_1Posts_a8d5fd2451a74cbef923c841192627ee4}} 
+\index{main\+::models\+::\+Posts@{main\+::models\+::\+Posts}!job\+\_\+date@{job\+\_\+date}}
+\index{job\+\_\+date@{job\+\_\+date}!main\+::models\+::\+Posts@{main\+::models\+::\+Posts}}
+\subsubsection{\texorpdfstring{job\+\_\+date}{job\_date}}
+{\footnotesize\ttfamily main.\+models.\+Posts.\+job\+\_\+date = models.\+Date\+Time\+Field(\char`\"{}job date\char`\"{},default=datetime.\+now())\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+date of job 
+
+\mbox{\Hypertarget{classmain_1_1models_1_1Posts_a01fb86493104e3ed82c25b011b4768a7}\label{classmain_1_1models_1_1Posts_a01fb86493104e3ed82c25b011b4768a7}} 
+\index{main\+::models\+::\+Posts@{main\+::models\+::\+Posts}!job\+\_\+details@{job\+\_\+details}}
+\index{job\+\_\+details@{job\+\_\+details}!main\+::models\+::\+Posts@{main\+::models\+::\+Posts}}
+\subsubsection{\texorpdfstring{job\+\_\+details}{job\_details}}
+{\footnotesize\ttfamily main.\+models.\+Posts.\+job\+\_\+details = models.\+Text\+Field()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A brief description of the job. 
+
+\mbox{\Hypertarget{classmain_1_1models_1_1Posts_a6a7cef4a2cff2cb38557a346b1b9cc9e}\label{classmain_1_1models_1_1Posts_a6a7cef4a2cff2cb38557a346b1b9cc9e}} 
+\index{main\+::models\+::\+Posts@{main\+::models\+::\+Posts}!job\+\_\+location@{job\+\_\+location}}
+\index{job\+\_\+location@{job\+\_\+location}!main\+::models\+::\+Posts@{main\+::models\+::\+Posts}}
+\subsubsection{\texorpdfstring{job\+\_\+location}{job\_location}}
+{\footnotesize\ttfamily main.\+models.\+Posts.\+job\+\_\+location = models.\+Char\+Field(max\+\_\+length=100,default=\char`\"{}Hostel\+X\+YZ\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Location of the job. 
+
+\mbox{\Hypertarget{classmain_1_1models_1_1Posts_aff937f03c1b067fa1dbc22fe0a4f141c}\label{classmain_1_1models_1_1Posts_aff937f03c1b067fa1dbc22fe0a4f141c}} 
+\index{main\+::models\+::\+Posts@{main\+::models\+::\+Posts}!job\+\_\+title@{job\+\_\+title}}
+\index{job\+\_\+title@{job\+\_\+title}!main\+::models\+::\+Posts@{main\+::models\+::\+Posts}}
+\subsubsection{\texorpdfstring{job\+\_\+title}{job\_title}}
+{\footnotesize\ttfamily main.\+models.\+Posts.\+job\+\_\+title = models.\+Char\+Field(max\+\_\+length=200)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The title of the post. 
+
+\mbox{\Hypertarget{classmain_1_1models_1_1Posts_a6e0e50f0ed5e44dc5b275de570745348}\label{classmain_1_1models_1_1Posts_a6e0e50f0ed5e44dc5b275de570745348}} 
+\index{main\+::models\+::\+Posts@{main\+::models\+::\+Posts}!post\+\_\+published@{post\+\_\+published}}
+\index{post\+\_\+published@{post\+\_\+published}!main\+::models\+::\+Posts@{main\+::models\+::\+Posts}}
+\subsubsection{\texorpdfstring{post\+\_\+published}{post\_published}}
+{\footnotesize\ttfamily main.\+models.\+Posts.\+post\+\_\+published = models.\+Date\+Time\+Field(\char`\"{}date published\char`\"{},default=datetime.\+now())\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Date when the post was published. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/\hyperlink{models_8py}{models.\+py}\end{DoxyCompactItemize}

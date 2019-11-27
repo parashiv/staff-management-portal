@@ -1,0 +1,82 @@
+
+#banner-image {
+	height: 92.5vh;
+	padding-top: 75px;
+	padding-bottom: 50px;
+	text-align: center;
+	color: #f8f8f8;
+	background: url(../intro-bg_1.jpg) no-repeat center center;
+	background-size: cover;
+
+}
+
+#banner-content
+{	
+	position: relative;
+	padding-top: 6%;
+	padding-bottom: 6%;
+	max-width: 660px;
+	margin: auto;
+	background-color: rgba(0,0,0,0.7);
+	font-size: 36px;
+}
+
+#banner-content .p 
+{
+	font-size: 36px;
+}
+
+.footer
+{
+	text-align: center;
+	height: 50px;
+	background-color: black;
+	color: white;
+	padding-top: 15px;
+	padding-bottom: 0;
+	width: 100%;
+	bottom: 0;
+	position: fixed;
+}
+footer {
+    clear: both;
+    position: relative;
+    height: 200px;
+    margin-top: -200px;
+}
+@media(max-width: 548px){
+
+	.footer {
+		padding-top: 7px;
+		font-size: 12px
+	}
+
+}
+.login-panel {
+	
+	width: 45%;
+	min-width: 300px;
+	margin: auto;
+	margin-top: 105px;
+}
+.signup {
+	margin-top: 65px;
+}
+.jumbotron {
+	margin-top: 80px;
+
+}
+.setting {
+	margin-top: 105px;
+}
+#c1
+{
+    min-height: 70%;
+    min-height: -webkit-calc(100% - 50px);
+    min-height: -moz-calc(100% - 50px);
+    min-height: calc(100% - 50px);
+}
+
+th,td {
+	height :35px;
+}

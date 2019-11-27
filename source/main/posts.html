@@ -1,0 +1,13 @@
+{% load static %}
+
+
+
+
+{% for p in posts %}
+	
+	<p>{{p.post_title}}</p>
+	<p>{{p.post_published}}</p>
+	<p>{{p.post_content}}</p>
+	<br><br>
+
+{% endfor %}

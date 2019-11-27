@@ -1,0 +1,127 @@
+\documentclass[14pt]{extarticle}
+\usepackage{bera}
+\usepackage{graphicx}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{calc}
+\usepackage{tabularx}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{soul}
+
+\renewcommand\labelitemi{\large$\bullet$}
+
+\begin{document}
+
+\begin{titlepage}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\center
+\textsc{\LARGE
+CS 699 Course Project
+} \\[1cm]
+\includegraphics[scale=0.6]{iitb.png} \\[1cm]
+\HRule \\[0.4cm]
+{ \huge \bfseries Staff Management Portal \\[0.15cm] }
+\HRule \\[1.5cm]
+{\Large \textbf{The Codesmiths} } \\ [1cm]
+Subhojit Roy Bardhan (193050002)
+\\[0.2cm]
+Parashiv Sihaniya (193050029)
+\\[0.2cm]
+\st{Shivam Dixit (193050012)}
+\\[1cm]
+
+\end{titlepage}
+
+\tableofcontents
+\newpage
+\section{Introduction}
+Our goal with this project has been to provide an easy-to-use platform for both lower level workers at organizations and their supervisors in order to facilitate transparency and productivity among them. We built a web-based portal using Django, Bootstrap and a few other frameworks to provide a clutter free news feed like interface for the workers and an interface for the supervisors for managing workers. The news feed contains relevant and useful information like announcements and notice board, etc.
+    
+\section{Motivation}
+    \begin{itemize}
+        \item Maintenance staff at the lower level generally suffers from a communication gap with their supervisors due to lack of transparency in management. We attempted to bridge this gap by providing an easy to navigate platform for both workers and supervisors.
+        
+        \item A certain level of transparency and coordination is required for smooth
+        operation in situations where large groups of workers are to be supervised.
+        
+        \item The problem with offline methods of bookkeeping and feedback (like
+        maintaining a written record for leaves, attendance etc.) is that these methods
+        can be somewhat unclear, and past records are not readily available for the
+        workers to observe.
+        
+        \item We want to contribute something towards solving such problems and this project has been a step in the right direction towards learning to use technology as an enabler of bringing about positive change.
+    \end{itemize}
+
+{\large
+\begin{quote}
+\enquote{If you're in the luckiest one per cent of humanity, you owe it to the rest of humanity to think about the other 99 per cent.}\begin{flushright}- Warren Buffet\end{flushright}
+\end{quote}
+}
+
+\newpage
+\section{User Documentation}
+\subsection{Installing prerequisite software}
+The project requires the following Python frameworks in order to run:
+\begin{enumerate}
+    \item Django
+    \item Django Crispy Forms [MIT License]
+    \item Django Jet-API [MIT License]
+\end{enumerate}
+In order to make the installation process easier, the user simply needs to execute the following command in the code's parent directory (where requirements.txt is located):
+\newline
+\noindent\rule{\textwidth}{0.5pt}
+\begin{lstlisting}[language=bash]
+  $ pip3 install -r requirements.txt
+\end{lstlisting}
+\noindent\rule{\textwidth}{0.5pt}
+
+\subsection{Starting the Server}
+Once the required packages have been installed, the user needs to run the following command (in the code's parent directory) to start the portal:
+\newline
+\noindent\rule{\textwidth}{0.5pt}
+\begin{lstlisting}[language=bash]
+  $ python3 manage.py runserver [address:port]
+\end{lstlisting}
+\noindent\rule{\textwidth}{0.5pt}
+
+If no address:port is given, the server will default to 127.0.0.1:8000.
+\newline
+The portal can then be visited at the above address.
+
+\newpage
+
+\subsection{Using the Portal}
+There are two types of accounts supported by the portal:
+\begin{enumerate}
+    \item For Supervisors
+    \item For General Staff
+\end{enumerate}
+We first need to sign up with any of the above two accounts and then log in to the portal. Depending on the type of account, different options will be presented to the user. \\
+\newline
+\textbf{Supervisor:}
+\begin{enumerate}
+    \item See the overall portal activity in greater detail by using a customized dashboard
+    \item Add/update/remove job postings.
+    \item Approve/disapprove requests for leave by their staff workers.
+    \item View the posts activity on the portal via graphs.
+\end{enumerate}
+\textbf{Staff:}
+\begin{enumerate}
+    \item Can view and apply for job postings posted by supervisors
+    \item Request for leaves by specifying the number of days and the reason for leave
+\end{enumerate}
+
+\section{Project Outcome}
+The portal can be of great help to staff and supervisors alike and can help them in keeping work related information more streamlined and transparent. While the base platform has been developed, we would like to add more features such as full-fledged Android and iOS apps.
+
+The project encouraged us to learn Django which we found to be a simple yet powerful framework for web development. 
+
+\section{References}
+\begin{enumerate}
+    \item Vitor Freitas, Django Guide for Beginners, \newline https://simpleisbetterthancomplex.com/series/2017/09/04/a-complete-beginners-guide-to-django-part-1.html
+    \item Django Jet Admin. https://github.com/jet-admin/jet-django
+    \item Django Girls, https://tutorial.djangogirls.org/en/
+\end{enumerate}
+
+\end{document}

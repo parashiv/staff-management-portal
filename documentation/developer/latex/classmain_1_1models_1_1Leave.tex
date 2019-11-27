@@ -1,0 +1,101 @@
+\hypertarget{classmain_1_1models_1_1Leave}{}\section{main.\+models.\+Leave Class Reference}
+\label{classmain_1_1models_1_1Leave}\index{main.\+models.\+Leave@{main.\+models.\+Leave}}
+
+
+Defines the model to store all the leave\+\_\+requests-\/related details.  
+
+
+Inheritance diagram for main.\+models.\+Leave\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmain_1_1models_1_1Leave}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classmain_1_1models_1_1Leave_a79313821dfa94be8abab7a134808b972}{\+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmain_1_1models_1_1Leave_ad385bab40efa61e41021f8bdeccfbd4f}{start\+\_\+date} = models.\+Date\+Field(\char`\"{}start date\char`\"{})
+\begin{DoxyCompactList}\small\item\em Start date of the leave period. \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1models_1_1Leave_a99445fa4624f6668e3e881e0612ebd10}{no\+\_\+of\+\_\+days} = models.\+Integer\+Field()
+\begin{DoxyCompactList}\small\item\em Total no of days in the leave period. \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1models_1_1Leave_af65436e87a630c5d204bb91f8c0ccf01}{reason} = models.\+Text\+Field()
+\begin{DoxyCompactList}\small\item\em Reason for the leave request. \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1models_1_1Leave_a5a7ee37588c877c656b587b091051bf4}{approved} = models.\+Boolean\+Field(default=\textquotesingle{}false\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Approval status of the request. \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1models_1_1Leave_a062e4dd38d8e161c3b50a0b6cf7095f2}{author} = models.\+Char\+Field(max\+\_\+length=200,default=\char`\"{}Author\char`\"{})
+\begin{DoxyCompactList}\small\item\em username of the staff who applied for the leave \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines the model to store all the leave\+\_\+requests-\/related details. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classmain_1_1models_1_1Leave_a79313821dfa94be8abab7a134808b972}\label{classmain_1_1models_1_1Leave_a79313821dfa94be8abab7a134808b972}} 
+\index{main\+::models\+::\+Leave@{main\+::models\+::\+Leave}!\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}!main\+::models\+::\+Leave@{main\+::models\+::\+Leave}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+str\+\_\+\+\_\+()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def main.\+models.\+Leave.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classmain_1_1models_1_1Leave_a5a7ee37588c877c656b587b091051bf4}\label{classmain_1_1models_1_1Leave_a5a7ee37588c877c656b587b091051bf4}} 
+\index{main\+::models\+::\+Leave@{main\+::models\+::\+Leave}!approved@{approved}}
+\index{approved@{approved}!main\+::models\+::\+Leave@{main\+::models\+::\+Leave}}
+\subsubsection{\texorpdfstring{approved}{approved}}
+{\footnotesize\ttfamily main.\+models.\+Leave.\+approved = models.\+Boolean\+Field(default=\textquotesingle{}false\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Approval status of the request. 
+
+\mbox{\Hypertarget{classmain_1_1models_1_1Leave_a062e4dd38d8e161c3b50a0b6cf7095f2}\label{classmain_1_1models_1_1Leave_a062e4dd38d8e161c3b50a0b6cf7095f2}} 
+\index{main\+::models\+::\+Leave@{main\+::models\+::\+Leave}!author@{author}}
+\index{author@{author}!main\+::models\+::\+Leave@{main\+::models\+::\+Leave}}
+\subsubsection{\texorpdfstring{author}{author}}
+{\footnotesize\ttfamily main.\+models.\+Leave.\+author = models.\+Char\+Field(max\+\_\+length=200,default=\char`\"{}Author\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+username of the staff who applied for the leave 
+
+\mbox{\Hypertarget{classmain_1_1models_1_1Leave_a99445fa4624f6668e3e881e0612ebd10}\label{classmain_1_1models_1_1Leave_a99445fa4624f6668e3e881e0612ebd10}} 
+\index{main\+::models\+::\+Leave@{main\+::models\+::\+Leave}!no\+\_\+of\+\_\+days@{no\+\_\+of\+\_\+days}}
+\index{no\+\_\+of\+\_\+days@{no\+\_\+of\+\_\+days}!main\+::models\+::\+Leave@{main\+::models\+::\+Leave}}
+\subsubsection{\texorpdfstring{no\+\_\+of\+\_\+days}{no\_of\_days}}
+{\footnotesize\ttfamily main.\+models.\+Leave.\+no\+\_\+of\+\_\+days = models.\+Integer\+Field()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Total no of days in the leave period. 
+
+\mbox{\Hypertarget{classmain_1_1models_1_1Leave_af65436e87a630c5d204bb91f8c0ccf01}\label{classmain_1_1models_1_1Leave_af65436e87a630c5d204bb91f8c0ccf01}} 
+\index{main\+::models\+::\+Leave@{main\+::models\+::\+Leave}!reason@{reason}}
+\index{reason@{reason}!main\+::models\+::\+Leave@{main\+::models\+::\+Leave}}
+\subsubsection{\texorpdfstring{reason}{reason}}
+{\footnotesize\ttfamily main.\+models.\+Leave.\+reason = models.\+Text\+Field()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Reason for the leave request. 
+
+\mbox{\Hypertarget{classmain_1_1models_1_1Leave_ad385bab40efa61e41021f8bdeccfbd4f}\label{classmain_1_1models_1_1Leave_ad385bab40efa61e41021f8bdeccfbd4f}} 
+\index{main\+::models\+::\+Leave@{main\+::models\+::\+Leave}!start\+\_\+date@{start\+\_\+date}}
+\index{start\+\_\+date@{start\+\_\+date}!main\+::models\+::\+Leave@{main\+::models\+::\+Leave}}
+\subsubsection{\texorpdfstring{start\+\_\+date}{start\_date}}
+{\footnotesize\ttfamily main.\+models.\+Leave.\+start\+\_\+date = models.\+Date\+Field(\char`\"{}start date\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Start date of the leave period. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/\hyperlink{models_8py}{models.\+py}\end{DoxyCompactItemize}

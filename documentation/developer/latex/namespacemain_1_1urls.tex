@@ -1,0 +1,50 @@
+\hypertarget{namespacemain_1_1urls}{}\section{main.\+urls Namespace Reference}
+\label{namespacemain_1_1urls}\index{main.\+urls@{main.\+urls}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{namespacemain_1_1urls_a51dcca3e024577b219fd64d918455026}{app\+\_\+name} = \char`\"{}main\char`\"{}
+\item 
+list \hyperlink{namespacemain_1_1urls_a49ff062cbecb056ec955c38ee8b784c3}{urlpatterns}
+\begin{DoxyCompactList}\small\item\em contain the url patterns and their respective views \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Used to perform certain views against certain url requests
+Is a mapping between URL path expressions to Python functions (the views).
+\end{DoxyVerb}
+ 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacemain_1_1urls_a51dcca3e024577b219fd64d918455026}\label{namespacemain_1_1urls_a51dcca3e024577b219fd64d918455026}} 
+\index{main\+::urls@{main\+::urls}!app\+\_\+name@{app\+\_\+name}}
+\index{app\+\_\+name@{app\+\_\+name}!main\+::urls@{main\+::urls}}
+\subsubsection{\texorpdfstring{app\+\_\+name}{app\_name}}
+{\footnotesize\ttfamily string main.\+urls.\+app\+\_\+name = \char`\"{}main\char`\"{}}
+
+\mbox{\Hypertarget{namespacemain_1_1urls_a49ff062cbecb056ec955c38ee8b784c3}\label{namespacemain_1_1urls_a49ff062cbecb056ec955c38ee8b784c3}} 
+\index{main\+::urls@{main\+::urls}!urlpatterns@{urlpatterns}}
+\index{urlpatterns@{urlpatterns}!main\+::urls@{main\+::urls}}
+\subsubsection{\texorpdfstring{urlpatterns}{urlpatterns}}
+{\footnotesize\ttfamily list main.\+urls.\+urlpatterns}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  [
+2     path(\textcolor{stringliteral}{''}, views.homepage, name=\textcolor{stringliteral}{"homepage"}),
+3     path(\textcolor{stringliteral}{'posts/'}, views.posts, name=\textcolor{stringliteral}{"posts"}),
+4     path(\textcolor{stringliteral}{'register/'},views.register, name=\textcolor{stringliteral}{"register"}),
+5     path(\textcolor{stringliteral}{'staff/'},views.register\_staff, name=\textcolor{stringliteral}{"register\_staff"}),
+6     path(\textcolor{stringliteral}{'supervisor/'},views.register\_supervisor, name=\textcolor{stringliteral}{"register\_supervisor"}),
+7     path(\textcolor{stringliteral}{"logout/"}, views.logout\_request, name=\textcolor{stringliteral}{"logout"}),
+8     path(\textcolor{stringliteral}{"login/"}, views.login\_request, name=\textcolor{stringliteral}{"login"}),
+9     path(\textcolor{stringliteral}{"add\_post/"}, views.create\_posts, name=\textcolor{stringliteral}{"create\_post"}),
+10     path(\textcolor{stringliteral}{"apply\_leave/"}, views.leave, name=\textcolor{stringliteral}{"apply\_leave"}),
+11     path(\textcolor{stringliteral}{"leave\_requests/"},views.leave\_requests, name=\textcolor{stringliteral}{'leave\_requests'}),
+12     path(\textcolor{stringliteral}{"select\_supervisor/"}, views.select\_supervisor, name=\textcolor{stringliteral}{'select\_supervisor'}),
+13 ]
+\end{DoxyCode}
+
+
+contain the url patterns and their respective views 
+
